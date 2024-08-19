@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>USER REGISTRATION FORM</h1>
+
+<table>
+    <tr>
+        <td><label for="fname"><b>First name:</b></label></td>
+        <td><input type="text" placeholder="Enter first name" id="fname" name="fname"></td>
+    </tr>
+    <tr>
+        <td><label for="mname"><b>Middle name:</b></label></td>
+        <td><input type="text" placeholder="Enter middle name" id="mname" name="mname"></td>
+    </tr>
+    <tr>
+        <td><label for="lname"><b>Last name:</b></label></td>
+        <td><input type="text" placeholder="Enter last name" id="lname" name="lname"></td>
+    </tr>
+    <tr>
+        <td><label for="email"><b>Email:</b></label></td>
+        <td><input type="text" placeholder="Enter Email" name="email" id="email" required></td>
+    </tr>
+    <tr>
+        <td><label for="psw"><b>Password:</b></label></td>
+        <td><input type="password" placeholder="Enter Password" name="psw" id="psw" required></td>
+    </tr>
+    <tr>
+        <td><label for="psw-repeat"><b>Repeat Password:</b></label></td>
+        <td><input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required></td>
+    </tr>
+    <tr>
+        <td><label for="gender"><b>Gender:</b></label></td>
+        <td>
+            <select id="gender" name="gender" required>
+                <option value="Male">MALE</option>
+                <option value="Female">FEMALE</option>
+                <option value="others">OTHERS</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><b>Nationality:</b></td>
+        <td>
+            <input type="checkbox" id="INDIAN" name="INDIAN" value="INDIAN">
+            <label for="INDIAN">INDIAN</label><br>
+            <input type="checkbox" id="PAKISTAN" name="PAKISTAN" value="PAKISTAN">
+            <label for="PAKISTAN">PAKISTAN</label><br>
+            <input type="checkbox" id="USA" name="USA" value="USA">
+            <label for="USA">USA</label>
+        </td>
+    </tr>
+    <tr>
+        <td><p><b>Please select your age:</b></p></td>
+        <td>
+            <input type="radio" id="age1" name="age" value="30">
+            <label for="age1">0 - 30</label><br>
+            <input type="radio" id="age2" name="age" value="60">
+            <label for="age2">31 - 60</label><br>
+            <input type="radio" id="age3" name="age" value="100">
+            <label for="age3">61 - 100</label><br>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align: center;">
+            <button type="button" onclick="alert('registered')">Register</button>
+            <input type="submit" value="Submit">
+        </td>
+    </tr>
+</table>
+
+</body>
+<style>
+table {
+            width: 50%;
+            margin: 0 auto;
+            border: 2px solid black; /* Adds a border around the entire table */
+            border-collapse: collapse; /* Ensures no gaps between the table border and the cells */
+        }
+
+         td {
+            border: none; /* Removes borders from the cells */
+            padding: 8px; /* Adds padding inside the cells */
+            text-align: center; /* Aligns text to the left */
+        }
+h1{text-align:center}
+</style>
+</html>
