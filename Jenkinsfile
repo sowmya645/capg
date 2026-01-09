@@ -1,27 +1,27 @@
-cat > Jenkinsfile << 'EOF' 
 pipeline {
     agent any 
     tools { 
-        jdk 'jdk21'  // Make sure JDK is configured in Jenkins 
+        jdk 'jdk-21'  // Make sure JDK is configured in Jenkins 
     }
     stages { 
         stage('Checkout') { 
             steps { 
-                git branch: 'main', 
-                    url: 'C:\Users\91906\OneDrive\Documents\pipeline-git-repo'  // Update path 
+                git branch: 'master', 
+                    url: 'https://github.com/sowmya645/capg.git'  // Update path 
                 echo 'Repository cloned successfully' 
             } 
         } 
         stage('Build') { 
             steps { 
                 echo 'Building application...' 
+                sh 'chmod +x ./build.sh'
                 sh './build.sh' 
             } 
         } 
         stage('Test') { 
             steps { 
                 echo 'Running tests...' 
-                sh 'java -cp src/main/java com.example.HelloDevOpsTest' 
+                sh 'java -cp build/classes com.example.HelloDevOpsTest' 
             } 
         } 
         stage('Archive') { 
@@ -38,5 +38,4 @@ pipeline {
             cleanWs()  // Clean workspace 
         } 
     }
-} 
-EOF
+}
